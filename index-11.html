@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="Create magical, cinematic wish websites for birthdays, love, anniversaries & more. Share via WhatsApp with beautiful animations.">
+  <meta name="keywords" content="wish website, birthday wish, anniversary wish, greeting website, wish maker, WishVerse">
+  <meta name="author" content="Imran">
+  <meta property="og:title" content="WishVerse ✨ - Create Magical Wish Experiences">
+  <meta property="og:description" content="Design cinematic, emotional wish websites for birthdays, love, anniversaries & beyond.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>WishVerse ✨ - Magical Wish Experiences | by Imran</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════ LOADING SCREEN ═══════════ -->
+  <div id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-emoji">✨</div>
+      <div class="loading-title">WishVerse</div>
+      <div class="loading-bar-wrap"><div class="loading-bar-fill"></div></div>
+      <div class="loading-by">by Imran</div>
+    </div>
+  </div>
+
+  <!-- ═══════════ BACKGROUND ═══════════ -->
+  <div id="stars-bg" aria-hidden="true"></div>
+  <div aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- ═══════════ MAIN APP ═══════════ -->
+  <div id="app" role="main"></div>
+
+  <!-- ═══════════ TOAST ═══════════ -->
+  <div id="toast-container" role="alert" aria-live="polite"></div>
+
+  <!-- ═══════════ CONFETTI ═══════════ -->
+  <div id="confetti-container" aria-hidden="true"></div>
+
+  <!-- ═══════════ REACTIONS ═══════════ -->
+  <div id="reaction-container" aria-hidden="true"></div>
+
+  <!-- ═══════════ SUPPORT MODAL ═══════════ -->
+  <div id="modal-support" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-label="Support WishVerse">
+    <div class="modal-box" id="support-box"></div>
+  </div>
+
+  <!-- ═══════════ PRIVACY MODAL ═══════════ -->
+  <div id="modal-privacy" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-box modal-doc">
+      <button class="modal-close" onclick="closeModal('modal-privacy')" aria-label="Close">×</button>
+      <div class="modal-doc-header">
+        <div class="modal-doc-icon">🔒</div>
+        <h2 class="modal-doc-title">Privacy Policy</h2>
+        <p class="modal-doc-date">Last updated: June 2025</p>
+      </div>
+      <div id="privacy-content" class="modal-doc-content"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ TERMS MODAL ═══════════ -->
+  <div id="modal-terms" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-box modal-doc">
+      <button class="modal-close" onclick="closeModal('modal-terms')" aria-label="Close">×</button>
+      <div class="modal-doc-header">
+        <div class="modal-doc-icon">📜</div>
+        <h2 class="modal-doc-title">Terms & Conditions</h2>
+        <p class="modal-doc-date">Last updated: June 2025</p>
+      </div>
+      <div id="terms-content" class="modal-doc-content"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ CONTACT MODAL ═══════════ -->
+  <div id="modal-contact" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-contact')" aria-label="Close">×</button>
+      <div id="contact-content"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ PHOTO INPUT (hidden) ═══════════ -->
+  <input type="file" id="photo-input" accept="image/*" style="display:none" aria-label="Upload photo">
+
+  <script src="script.js"></script>
+</body>
+</html>
